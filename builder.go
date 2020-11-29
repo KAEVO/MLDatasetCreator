@@ -13,3 +13,11 @@ type Builder struct {
 	featureMap map[string]*Feature
 	data       [][]string // Strings of Data to be read in to CSV
 	records    int        // Number of records to be retrieved for dataset
+
+	// Some fields for auth credentials
+	authUsername string
+	authPassword string
+}
+
+// NewBuilder creates new Builder struct
+func NewBuilder(featureCount, recordCount int, options ...func(*Builder)) *Builder {
