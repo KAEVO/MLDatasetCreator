@@ -54,3 +54,17 @@ func (b *Builder) addFeatureData(featureName string, values []string) error {
 
 func (b *Builder) getFeatureData(featureName string) []string {
 	items := make([]string, b.records)
+	if _, ok := b.featureMap[featureName]; ok {
+		readStringColumn(items, featureName, b.data)
+		return items
+	}
+	// readStringColumn(items, featureName, b.data)
+	return items
+}
+
+// GetFeature returns a feature in the detaset based on it's name
+func (b *Builder) GetFeature(name string) *Feature {
+	var feat *Feature
+	if val, ok := b.featureMap[name]; ok {
+		feat = val
+		return feat
