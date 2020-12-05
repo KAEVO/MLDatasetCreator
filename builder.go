@@ -37,3 +37,20 @@ func NewBuilder(featureCount, recordCount int, options ...func(*Builder)) *Build
 	}
 
 	return &b
+}
+
+// WithBasicAuth is a Builder option that adds a username and password for Basic API authentication
+func WithBasicAuth(username, password string) {
+	return func(b *Builder) {
+		b.authUsername = username
+		b.authPassword = password
+	}
+}
+
+func (b *Builder) addFeatureData(featureName string, values []string) error {
+	writeStringColumn(b.data, featureName, values)
+	return nil
+}
+
+func (b *Builder) getFeatureData(featureName string) []string {
+	items := make([]string, b.records)
