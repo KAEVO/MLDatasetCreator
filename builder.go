@@ -68,3 +68,13 @@ func (b *Builder) GetFeature(name string) *Feature {
 	if val, ok := b.featureMap[name]; ok {
 		feat = val
 		return feat
+	}
+	// err := errors.New("No such Feature in builder")
+	return feat
+}
+
+func (b *Builder) writeRecord(writer csv.Writer, i int) error {
+	var record []string
+	for index, j := range b.data[i] {
+		// if data header (feature name) has noSave == false, else don't write
+		if !b.featureMap[b.data[0][index]].noSave {
