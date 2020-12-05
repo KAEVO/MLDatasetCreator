@@ -21,3 +21,19 @@ type Builder struct {
 
 // NewBuilder creates new Builder struct
 func NewBuilder(featureCount, recordCount int, options ...func(*Builder)) *Builder {
+	// Add extra row for header
+	preallocatedData := make([][]string, recordCount+1)
+	for i := range preallocatedData {
+		preallocatedData[i] = make([]string, featureCount)
+	}
+	b := Builder{
+		featureMap: make(map[string]*Feature),
+		data:       preallocatedData,
+		records:    recordCount,
+	}
+
+	for _, option := range options {
+		option(&b)
+	}
+
+	return &b
