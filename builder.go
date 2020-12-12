@@ -92,3 +92,22 @@ func (b *Builder) writeRecord(writer csv.Writer, i int) error {
 func (b *Builder) Save(writer csv.Writer) error {
 	for i := range b.data {
 		err := b.writeRecord(writer, i)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+// SaveIf saves records only if saveCond evaluate to true
+func (b *Builder) SaveIf(writer csv.Writer, saveCond func(r []string) bool) error {
+	for i := range b.data {
+		if saveCond(b.data[i]) {
+			err := b.writeRecord(writer, i)
+			if err != nil {
+				return err
+			}
+		}
+	}
+	return nil
+}
