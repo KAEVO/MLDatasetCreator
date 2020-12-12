@@ -78,3 +78,17 @@ func (b *Builder) writeRecord(writer csv.Writer, i int) error {
 	for index, j := range b.data[i] {
 		// if data header (feature name) has noSave == false, else don't write
 		if !b.featureMap[b.data[0][index]].noSave {
+			record = append(record, j)
+		}
+	}
+	err := writer.Write(record)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+// Save commits the downloaded features to a file
+func (b *Builder) Save(writer csv.Writer) error {
+	for i := range b.data {
+		err := b.writeRecord(writer, i)
