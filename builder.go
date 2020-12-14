@@ -124,3 +124,19 @@ func (b *Builder) AddFeatures(features ...*Feature) {
 		for i := range b.data {
 			b.data[i] = append(b.data[i], "")
 		}
+	}
+}
+
+func (b *Builder) createRequest(
+	endpoint string,
+) (*http.Request, error) {
+	headers := b.RequestHeaders
+
+	req, err := http.NewRequest("GET", b.BaseURL+endpoint, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	// only add this if the auth credentials are set by an option
+	if b.authUsername != "" && b.authPassword != "" {
+		req.SetBasicAuth(b.authUsername, b.authPassword)
