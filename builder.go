@@ -182,3 +182,17 @@ func (b *Builder) populateFeatureData(feature *Feature, client endpointClient) (
 	if err != nil {
 		return nil, err
 	}
+
+	for i := 0; i < b.records; i++ {
+		// endpoints should be the same as the number of
+		req, err := b.createRequest(endpoints[i])
+		if err != nil {
+			return nil, err
+		}
+
+		resp, err := client.Do(*req)
+		if err != nil {
+			return nil, err
+		}
+
+		defer resp.Body.Close()
