@@ -170,3 +170,15 @@ func (b *Builder) resolveFeatureEndpoints(feature *Feature) ([]string, error) {
 
 	return endpoints, nil
 }
+
+type endpointClient interface {
+	Do(req http.Request) (*http.Response, error)
+}
+
+// populateFeatureData returns string dumps of responses and an error if any
+func (b *Builder) populateFeatureData(feature *Feature, client endpointClient) ([]string, error) {
+	responseDumps := make([]string, b.records)
+	endpoints, err := b.resolveFeatureEndpoints(feature)
+	if err != nil {
+		return nil, err
+	}
