@@ -196,3 +196,19 @@ func (b *Builder) populateFeatureData(feature *Feature, client endpointClient) (
 		}
 
 		defer resp.Body.Close()
+
+		if resp.StatusCode == 200 { // OK
+			bodyBytes, _ := ioutil.ReadAll(resp.Body)
+			responseDumps[i] = string(bodyBytes)
+		}
+
+	}
+
+	return responseDumps, nil
+}
+
+// Run Builder to aggregate all features and manage concurrent operations
+func (b *Builder) Run(client endpointClient) error {
+
+	for _, feature := range b.featureMap {
+		parents, err := feature.getParentNames()
