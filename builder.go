@@ -212,3 +212,12 @@ func (b *Builder) Run(client endpointClient) error {
 
 	for _, feature := range b.featureMap {
 		parents, err := feature.getParentNames()
+		if err != nil {
+			return err
+		}
+
+		var populateError error
+		go func(feature *Feature) {
+			// Block till parent features finish executing
+			for _, i := range parents {
+				<-b.GetFeature(i).finished
