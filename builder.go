@@ -234,3 +234,14 @@ func (b *Builder) Run(client endpointClient) error {
 		}(feature)
 
 		if populateError != nil {
+			return populateError
+		}
+	}
+
+	// wait for all channels to be written before exiting function
+	for _, feature := range b.featureMap {
+		<-feature.finished
+	}
+
+	return nil
+}
