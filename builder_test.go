@@ -45,3 +45,14 @@ func TestAddFeature(t *testing.T) {
 			return []string{"one", "two", "three"}
 		},
 	}
+	b := NewBuilder(4, 3)
+	b.AddFeatures(f)
+	if got, want := b.featureMap["feat1"], f; got != want {
+		t.Fatalf("got: %v\n want: %v\n ", got, want)
+	}
+}
+
+func TestGetFeatureData(t *testing.T) {
+	f := &Feature{
+		Name:     "feat1",
+		Endpoint: "/endpoint1/",
