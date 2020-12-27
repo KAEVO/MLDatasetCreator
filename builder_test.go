@@ -30,3 +30,18 @@ func TestAddFeatureData(t *testing.T) {
 		[]string{"newFeature", "", "", ""},
 		[]string{"one", "", "", ""},
 		[]string{"two", "", "", ""},
+		[]string{"three", "", "", ""},
+	}
+	if got, want := b.data, expectedData; !reflect.DeepEqual(got, want) {
+		t.Fatalf("got: %v\n want: %v\n ", got, want)
+	}
+}
+
+func TestAddFeature(t *testing.T) {
+	f := &Feature{
+		Name:     "feat1",
+		Endpoint: "/endpoint1/",
+		RunFunc: func(res []string) []string {
+			return []string{"one", "two", "three"}
+		},
+	}
