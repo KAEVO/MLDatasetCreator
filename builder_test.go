@@ -56,3 +56,21 @@ func TestGetFeatureData(t *testing.T) {
 	f := &Feature{
 		Name:     "feat1",
 		Endpoint: "/endpoint1/",
+	}
+	// Note that the test fails when there is a greater featureCount
+	// than there are features when builder.getFeatureData is called
+	b := NewBuilder(1, 3)
+	data := []string{"one", "two", "three"}
+
+	b.AddFeatures(f)
+	err := b.addFeatureData(f.Name, data)
+
+	if err != nil {
+		t.Errorf("Error Occured: %v", err)
+	}
+
+	want := []string{"one", "two", "three"}
+	if got := b.getFeatureData("feat1"); !reflect.DeepEqual(got, want) {
+		t.Fatalf("got: %v\n want: %v\n ", got, want)
+	}
+}
