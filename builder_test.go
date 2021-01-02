@@ -74,3 +74,16 @@ func TestGetFeatureData(t *testing.T) {
 		t.Fatalf("got: %v\n want: %v\n ", got, want)
 	}
 }
+
+func TestGetFeature(t *testing.T) {
+	f := &Feature{
+		Name:     "feat1",
+		Endpoint: "/endpoint1/",
+		RunFunc: func(res []string) []string {
+			return []string{"one", "two", "three"}
+		},
+	}
+	b := NewBuilder(4, 3)
+	b.AddFeatures(f)
+	if got, want := b.GetFeature("feat1"), f; !reflect.DeepEqual(got, want) {
+		t.Fatalf("got: %v\n want: %v\n ", got, want)
