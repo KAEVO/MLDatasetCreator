@@ -102,3 +102,15 @@ func TestCreateRequest(t *testing.T) {
 	b := NewBuilder(4, 3) // arbitrary preallocations
 	b.BaseURL = "baseurl.com"
 	sampleOAuthHeader := BasicOAuthHeader(
+		"consumerKey", "nonce", "signature", "signatureMethod",
+		"timestamp", "token",
+	)
+	b.RequestHeaders = map[string]string{
+		"OAuth": sampleOAuthHeader,
+	}
+	endpoint := "/myEndpoint"
+
+	got, err := b.createRequest(endpoint)
+	if err != nil {
+		t.Errorf("Error Occured: %v", err)
+	}
