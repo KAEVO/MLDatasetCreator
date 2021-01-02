@@ -87,3 +87,18 @@ func TestGetFeature(t *testing.T) {
 	b.AddFeatures(f)
 	if got, want := b.GetFeature("feat1"), f; !reflect.DeepEqual(got, want) {
 		t.Fatalf("got: %v\n want: %v\n ", got, want)
+	}
+}
+
+func TestGetFeatureIfNoFeatures(t *testing.T) {
+	var NilFeature *Feature
+	b := NewBuilder(4, 3)
+	if got, want := b.GetFeature("feat1"), NilFeature; !reflect.DeepEqual(got, want) {
+		t.Fatalf("got: %v\n want: %v\n ", got, want)
+	}
+}
+
+func TestCreateRequest(t *testing.T) {
+	b := NewBuilder(4, 3) // arbitrary preallocations
+	b.BaseURL = "baseurl.com"
+	sampleOAuthHeader := BasicOAuthHeader(
