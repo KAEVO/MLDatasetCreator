@@ -114,3 +114,16 @@ func TestCreateRequest(t *testing.T) {
 	if err != nil {
 		t.Errorf("Error Occured: %v", err)
 	}
+
+	u, err := url.Parse(b.BaseURL + endpoint)
+	if err != nil {
+		t.Errorf("Error Occured: %v", err)
+	}
+
+	want := &http.Request{
+		Method:     "GET",
+		URL:        u,
+		Proto:      "HTTP/1.1",
+		ProtoMajor: 1,
+		ProtoMinor: 1,
+		Header: map[string][]string{
