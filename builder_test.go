@@ -157,3 +157,17 @@ func TestResolveFeatureEndpoints(t *testing.T) {
 	b.addFeatureData(f1.Name, []string{"one", "two", "three"})
 
 	got, err := b.resolveFeatureEndpoints(f2)
+	if err != nil {
+		t.Errorf("Error Occured: %v", err)
+	}
+
+	want := []string{
+		"/endpoint2/one",
+		"/endpoint2/two",
+		"/endpoint2/three",
+	}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Fatalf("got: %v\n want: %v\n ", got, want)
+	}
+}
