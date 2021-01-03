@@ -142,3 +142,18 @@ func TestCreateRequest(t *testing.T) {
 func TestResolveFeatureEndpoints(t *testing.T) {
 	b := NewBuilder(2, 3)
 	b.BaseURL = "baseurl.com"
+
+	f1 := &Feature{
+		Name:     "feat1",
+		Endpoint: "/endpoint1/",
+	}
+
+	f2 := &Feature{
+		Name:     "feat2",
+		Endpoint: "/endpoint2/{{feat1}}",
+	}
+
+	b.AddFeatures(f1, f2)
+	b.addFeatureData(f1.Name, []string{"one", "two", "three"})
+
+	got, err := b.resolveFeatureEndpoints(f2)
