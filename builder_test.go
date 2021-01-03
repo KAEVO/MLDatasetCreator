@@ -127,3 +127,18 @@ func TestCreateRequest(t *testing.T) {
 		ProtoMajor: 1,
 		ProtoMinor: 1,
 		Header: map[string][]string{
+			"Authorization": []string{sampleOAuthHeader},
+		},
+		Body: nil,
+		Host: u.Host,
+	}
+
+	if reflect.DeepEqual(got, want) {
+		t.Fatalf("got: %v\n want: %v\n ", got, want)
+	}
+
+}
+
+func TestResolveFeatureEndpoints(t *testing.T) {
+	b := NewBuilder(2, 3)
+	b.BaseURL = "baseurl.com"
