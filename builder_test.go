@@ -171,3 +171,15 @@ func TestResolveFeatureEndpoints(t *testing.T) {
 		t.Fatalf("got: %v\n want: %v\n ", got, want)
 	}
 }
+
+// func TestRetrieveFeature(t *testing.T) {
+// 	b := NewBuilder(4, 3)
+// }
+
+type fakeHttpClient struct{}
+
+var fakeResponseDump string = `
+{
+	id: 1000
+	id_str: "1000"
+	text: "this is a young tweet; tweety tweet tweet"
