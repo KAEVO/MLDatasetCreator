@@ -183,3 +183,16 @@ var fakeResponseDump string = `
 	id: 1000
 	id_str: "1000"
 	text: "this is a young tweet; tweety tweet tweet"
+}
+`
+
+func (fhc fakeHttpClient) Do(req http.Request) (*http.Response, error) {
+	return &http.Response{
+		Status:     "200 OK",
+		StatusCode: 200,
+		Body:       ioutil.NopCloser(bytes.NewBufferString(fakeResponseDump)),
+	}, nil
+}
+
+func TestPopulateFeatureData(t *testing.T) {
+	b := NewBuilder(1, 3)
