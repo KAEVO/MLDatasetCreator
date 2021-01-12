@@ -196,3 +196,19 @@ func (fhc fakeHttpClient) Do(req http.Request) (*http.Response, error) {
 
 func TestPopulateFeatureData(t *testing.T) {
 	b := NewBuilder(1, 3)
+	fakeClient := fakeHttpClient{}
+	b.BaseURL = "baseurl.com"
+	f := &Feature{
+		Name:     "f1",
+		Endpoint: "/endpoint",
+		RunFunc: func(res []string) []string {
+			return []string{"one", "two", "three"}
+		},
+	}
+
+	got, err := b.populateFeatureData(f, &fakeClient)
+	if err != nil {
+		t.Errorf("Error Occured: %v", err)
+	}
+	if want := fakeResponseDump; got[0] != want {
+		t.Fatalf("got: %v\n want: %v\n", got, want)
