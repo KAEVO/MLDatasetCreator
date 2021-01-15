@@ -212,3 +212,15 @@ func TestPopulateFeatureData(t *testing.T) {
 	}
 	if want := fakeResponseDump; got[0] != want {
 		t.Fatalf("got: %v\n want: %v\n", got, want)
+	}
+}
+
+func TestRun(t *testing.T) {
+	t.Logf("TestRun started")
+	b := NewBuilder(2, 3)
+	fakeClient := fakeHttpClient{}
+	b.BaseURL = "baseurl.com"
+	f1 := &Feature{
+		Name:     "f1",
+		Endpoint: "/endpoint",
+		RunFunc: func(res []string) []string {
