@@ -236,3 +236,8 @@ func TestRun(t *testing.T) {
 	}
 	b.AddFeatures(f1, f2)
 	err := b.Run(fakeClient)
+	if err != nil {
+		t.Errorf("Error Occured: %v", err)
+	}
+	t.Log(b.data)
+}
