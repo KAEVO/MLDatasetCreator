@@ -224,3 +224,15 @@ func TestRun(t *testing.T) {
 		Name:     "f1",
 		Endpoint: "/endpoint",
 		RunFunc: func(res []string) []string {
+			return []string{"one", "two", "three"}
+		},
+	}
+	f2 := &Feature{
+		Name:     "f2",
+		Endpoint: "/endpoint2",
+		RunFunc: func(res []string) []string {
+			return []string{"one", "two", "three"}
+		},
+	}
+	b.AddFeatures(f1, f2)
+	err := b.Run(fakeClient)
