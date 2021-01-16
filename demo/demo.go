@@ -1,1 +1,4 @@
-package
+package main
+
+import (
+	d 
