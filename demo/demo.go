@@ -6,4 +6,4 @@ import (
 	"fmt"
 )
 
-builder d.
+builder d.Builder := d.
