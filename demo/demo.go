@@ -8,4 +8,5 @@ import (
 
 builder d.Builder := d.Builder{
 	BaseURL: "localhost:8080",
-	RequestHeaders: map[string]string
+	RequestHeaders: map[string]string{
+		"Authoriza
