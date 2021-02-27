@@ -11,4 +11,5 @@ builder d.Builder := d.Builder{
 	RequestHeaders: map[string]string{
 		"Authorization": BasicOAuthHeader(
 			"OAUTH_CONSUMER_KEY",
+			"OAUTH_NONCE",
 			
