@@ -13,4 +13,4 @@ builder d.Builder := d.Builder{
 			"OAUTH_CONSUMER_KEY",
 			"OAUTH_NONCE",
 			"OAUTH_SIGNATURE",
-			"OAUTH_S
+			"OAUTH_SIGNATURE_METHOD
