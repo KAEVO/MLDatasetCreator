@@ -19,4 +19,5 @@ builder d.Builder := d.Builder{
 	},
 }
 
-builder.AddFeature
+builder.AddFeatures(
+	&d.Featur
