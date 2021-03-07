@@ -20,4 +20,5 @@ builder d.Builder := d.Builder{
 }
 
 builder.AddFeatures(
-	&d.Featur
+	&d.Feature{
+		Name: "item_
