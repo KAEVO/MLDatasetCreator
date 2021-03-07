@@ -23,4 +23,4 @@ builder.AddFeatures(
 	&d.Feature{
 		Name: "item_ids",
 		Endpoint: "/items/",
-		RunF
+		RunFunc: fun
