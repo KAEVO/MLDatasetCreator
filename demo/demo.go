@@ -23,4 +23,5 @@ builder.AddFeatures(
 	&d.Feature{
 		Name: "item_ids",
 		Endpoint: "/items/",
-		RunFunc: func(response []str
+		RunFunc: func(response []string) []string {
+			r
