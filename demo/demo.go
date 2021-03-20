@@ -24,4 +24,4 @@ builder.AddFeatures(
 		Name: "item_ids",
 		Endpoint: "/items/",
 		RunFunc: func(response []string) []string {
-			r
+			responseMap
