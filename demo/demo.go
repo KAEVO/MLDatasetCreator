@@ -25,4 +25,7 @@ builder.AddFeatures(
 		Endpoint: "/items/",
 		RunFunc: func(response []string) []string {
 			responseMap = (make[map]string)
-			json.Unmarshal(response, &responseMap
+			json.Unmarshal(response, &responseMap)
+		},
+	},
+	&d.Featur
