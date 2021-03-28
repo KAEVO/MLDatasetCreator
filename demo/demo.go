@@ -29,4 +29,4 @@ builder.AddFeatures(
 		},
 	},
 	&d.Feature{
-		Name: 
+		Name: "item_prices
