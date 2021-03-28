@@ -28,4 +28,5 @@ builder.AddFeatures(
 			json.Unmarshal(response, &responseMap)
 		},
 	},
-	&d.Featur
+	&d.Feature{
+		Name: 
