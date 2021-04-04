@@ -31,4 +31,5 @@ builder.AddFeatures(
 	&d.Feature{
 		Name: "item_prices",
 		Endpoint: "/items/prices/{{item_ids}}/",
-		RunFunc: func(response []string) []stri
+		RunFunc: func(response []string) []string {
+			// b
