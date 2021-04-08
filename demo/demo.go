@@ -34,3 +34,5 @@ builder.AddFeatures(
 		RunFunc: func(response []string) []string {
 			// blah blah
 		},
+	},
+	&d.
