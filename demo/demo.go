@@ -35,4 +35,5 @@ builder.AddFeatures(
 			// blah blah
 		},
 	},
-	&d.
+	&d.Feature{
+		Na
