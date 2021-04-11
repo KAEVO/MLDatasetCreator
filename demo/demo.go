@@ -36,4 +36,4 @@ builder.AddFeatures(
 		},
 	},
 	&d.Feature{
-		Na
+		Name: "item_c
