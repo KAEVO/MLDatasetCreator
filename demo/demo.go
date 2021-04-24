@@ -38,4 +38,4 @@ builder.AddFeatures(
 	&d.Feature{
 		Name: "item_category",
 		Endpoint: "/items/category/{{item_ids}}/",
-		RunFunc: 
+		RunFunc: func(response 
