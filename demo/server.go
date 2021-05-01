@@ -36,3 +36,18 @@ func itemsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(js)
 }
+
+func pricesHandler(w http.ResponseWriter, r *http.Request) {
+	path := url.Parse(r.URL).EscapedPath
+
+	prices := make(map[string][]string)
+	prices["prices"] = randIntStrings(recordCount)
+	js, err := json.Marshal(prices)
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(js)
+
+}
+
+func categoryHandler(w http.ResponseWriter, r *http.Request) {
+	categories := []string{"category1", "category2", "category3", "category4"}
