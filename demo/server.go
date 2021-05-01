@@ -15,3 +15,24 @@ import (
 
 const (
 	recordCount    = 1000
+	randomIntRange = 10000
+)
+
+func randIntStrings(count int) []string {
+	output := make([]string, count)
+	r := rand.New()
+	for i := 0; i < count; i++ {
+		output[i] = strconv.Itoa(r.Int31n(randomIntRange))
+	}
+}
+
+func itemsHandler(w http.ResponseWriter, r *http.Request) {
+	path := url.Parse(r.URL).EscapedPath
+
+	items := make(map[string][]string)
+	items["items"] = randIntStrings(recordCount)
+	js, err := json.Marshal(items)
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(js)
+}
