@@ -51,3 +51,14 @@ func pricesHandler(w http.ResponseWriter, r *http.Request) {
 
 func categoryHandler(w http.ResponseWriter, r *http.Request) {
 	categories := []string{"category1", "category2", "category3", "category4"}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(js)
+}
+
+func main() {
+	http.HandleFunc("/api/items/", itemsHandler)
+	http.HandleFunc("/api/items/prices", pricesHandler)
+	http.HandleFunc("/api/items/categories", categoryHandler)
+	http.ListenAndServe(":8080", nil)
+}
