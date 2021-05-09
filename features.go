@@ -5,4 +5,4 @@ import (
 	"regexp"
 )
 
-// RunFunc holds the computation that processes the API res
+// RunFunc holds the computation that processes the API responses to fea
