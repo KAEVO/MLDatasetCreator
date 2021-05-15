@@ -6,4 +6,4 @@ import (
 )
 
 // RunFunc holds the computation that processes the API responses to features
-// is sent an array of JSON
+// is sent an array of JSON strings as 
