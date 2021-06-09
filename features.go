@@ -9,4 +9,5 @@ import (
 // is sent an array of JSON strings as the responses ??as well as a map of data from the features parent features??
 // Basically what you do with the run function is take in a string of
 // serialized API data (could be in JSON or XML), do parsing on your
-// own or using utility functions. You do whatever computations you wan
+// own or using utility functions. You do whatever computations you want and
+// then s
