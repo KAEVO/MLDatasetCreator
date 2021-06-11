@@ -10,4 +10,4 @@ import (
 // Basically what you do with the run function is take in a string of
 // serialized API data (could be in JSON or XML), do parsing on your
 // own or using utility functions. You do whatever computations you want and
-// then s
+// then spit it back as an
