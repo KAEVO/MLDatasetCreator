@@ -11,4 +11,4 @@ import (
 // serialized API data (could be in JSON or XML), do parsing on your
 // own or using utility functions. You do whatever computations you want and
 // then spit it back as an array of strings to read to CSV or JSON
-type RunFunc func(responses []string) []string // parents ma
+type RunFunc func(responses []string) []string // parents map[string]string
