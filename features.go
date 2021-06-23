@@ -13,4 +13,5 @@ import (
 // then spit it back as an array of strings to read to CSV or JSON
 type RunFunc func(responses []string) []string // parents map[string]string
 
-// Structs representing
+// Structs representing RetreiveType
+// Si
