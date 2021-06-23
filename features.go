@@ -14,4 +14,4 @@ import (
 type RunFunc func(responses []string) []string // parents map[string]string
 
 // Structs representing RetreiveType
-// Si
+// SingleRetrieve Featu
