@@ -14,4 +14,4 @@ import (
 type RunFunc func(responses []string) []string // parents map[string]string
 
 // Structs representing RetreiveType
-// SingleRetrieve Features only require one request to create t
+// SingleRetrieve Features only require one request to create the JSON Dump
