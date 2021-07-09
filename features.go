@@ -17,4 +17,4 @@ type RunFunc func(responses []string) []string // parents map[string]string
 // SingleRetrieve Features only require one request to create the JSON Dump
 // that's passed to the RunFunc
 // Repeated Retrieve Features require one request per value-set of
-// of parent features that are concatenated int
+// of parent features that are concatenated into a JS
