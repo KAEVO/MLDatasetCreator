@@ -21,4 +21,5 @@ type RunFunc func(responses []string) []string // parents map[string]string
 // to the Features RunFunc
 // Almost as a given, all dependent features will be of RepeatedRetrieve per
 // value sets of their parent features
-const
+const (
+	SingleR
