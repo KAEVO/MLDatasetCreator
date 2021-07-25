@@ -23,4 +23,7 @@ type RunFunc func(responses []string) []string // parents map[string]string
 // value sets of their parent features
 const (
 	SingleRetrieve = iota
-	RepeatedRetri
+	RepeatedRetrieve
+)
+
+// Feature 
