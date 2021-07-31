@@ -26,4 +26,4 @@ const (
 	RepeatedRetrieve
 )
 
-// Feature 
+// Feature in the dataset
