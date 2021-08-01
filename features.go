@@ -26,4 +26,5 @@ const (
 	RepeatedRetrieve
 )
 
-// Feature in the dataset, on which all other features are bas
+// Feature in the dataset, on which all other features are based on
+type Feature s
