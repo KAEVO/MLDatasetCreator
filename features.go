@@ -26,4 +26,4 @@ const (
 	RepeatedRetrieve
 )
 
-// Feature in the dataset, on which all other featur
+// Feature in the dataset, on which all other features are bas
