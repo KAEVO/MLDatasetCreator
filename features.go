@@ -31,4 +31,4 @@ type Feature struct {
 	Name         string
 	Endpoint     string  // API Endpoint
 	RunFunc      RunFunc // function that performs ad-hoc computation
-	RetrieveType int     // Determines if multiple or
+	RetrieveType int     // Determines if multiple or single reque
