@@ -33,4 +33,7 @@ type Feature struct {
 	RunFunc      RunFunc // function that performs ad-hoc computation
 	RetrieveType int     // Determines if multiple or single requests are made to the api
 	noSave       bool
-	finished     chan bool // if feature is finishe
+	finished     chan bool // if feature is finished
+}
+
+// NewFeature
