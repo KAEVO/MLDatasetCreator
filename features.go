@@ -39,4 +39,5 @@ type Feature struct {
 // NewFeature creates new Feature with defaults
 func NewFeature() *Feature {
 	return &Feature{
-		noSave:   false
+		noSave:   false,
+		finished: make(c
