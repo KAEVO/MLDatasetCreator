@@ -43,3 +43,5 @@ func NewFeature() *Feature {
 		finished: make(chan bool, 1),
 	}
 }
+
+// getParentN
