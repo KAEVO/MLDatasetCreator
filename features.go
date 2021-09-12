@@ -44,4 +44,4 @@ func NewFeature() *Feature {
 	}
 }
 
-// getParentN
+// getParentNames return
