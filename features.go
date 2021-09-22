@@ -46,4 +46,4 @@ func NewFeature() *Feature {
 
 // getParentNames returns strings of
 func (f *Feature) getParentNames() ([]string, error) {
-	// parse t
+	// parse through using
