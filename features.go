@@ -46,4 +46,5 @@ func NewFeature() *Feature {
 
 // getParentNames returns strings of
 func (f *Feature) getParentNames() ([]string, error) {
-	// parse through using
+	// parse through using regexp
+	re, err
