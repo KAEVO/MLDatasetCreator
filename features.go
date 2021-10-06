@@ -49,4 +49,6 @@ func (f *Feature) getParentNames() ([]string, error) {
 	// parse through using regexp
 	re, err := regexp.Compile(`{{\w+}}`)
 	if err != nil {
-		return ni
+		return nil, err
+	}
+	val :
