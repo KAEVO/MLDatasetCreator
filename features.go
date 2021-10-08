@@ -51,4 +51,4 @@ func (f *Feature) getParentNames() ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
-	val :
+	val := re.FindAllStr
