@@ -58,4 +58,4 @@ func (f *Feature) getParentNames() ([]string, error) {
 	return val, nil
 }
 
-// resolveEndpoint returns t
+// resolveEndpoint returns the Endpoint but 
