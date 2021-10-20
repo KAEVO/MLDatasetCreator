@@ -55,4 +55,7 @@ func (f *Feature) getParentNames() ([]string, error) {
 	for i := range val {
 		val[i] = val[i][2 : len(val[i])-2] // trim off parentheses
 	}
-	return 
+	return val, nil
+}
+
+//
