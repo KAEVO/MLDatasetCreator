@@ -62,4 +62,4 @@ func (f *Feature) getParentNames() ([]string, error) {
 func (f *Feature) resolveEndpoint(parentsValues map[string]string) (string, error) {
 	toReplace := f.Endpoint
 
-	for k, v := r
+	for k, v := range parents
