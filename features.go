@@ -63,4 +63,4 @@ func (f *Feature) resolveEndpoint(parentsValues map[string]string) (string, erro
 	toReplace := f.Endpoint
 
 	for k, v := range parentsValues {
-		re, err := re
+		re, err := regexp.Compile(fm
