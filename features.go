@@ -64,4 +64,4 @@ func (f *Feature) resolveEndpoint(parentsValues map[string]string) (string, erro
 
 	for k, v := range parentsValues {
 		re, err := regexp.Compile(fmt.Sprintf("\\{\\{%s\\}\\}", k))
-		i
+		if err != nil {
