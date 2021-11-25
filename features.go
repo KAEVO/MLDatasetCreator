@@ -67,4 +67,4 @@ func (f *Feature) resolveEndpoint(parentsValues map[string]string) (string, erro
 		if err != nil {
 			return "", err
 		}
-		// overwrite toReplace to (kind of) recursive
+		// overwrite toReplace to (kind of) recursively do any 
