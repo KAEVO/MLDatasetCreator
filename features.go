@@ -69,3 +69,6 @@ func (f *Feature) resolveEndpoint(parentsValues map[string]string) (string, erro
 		}
 		// overwrite toReplace to (kind of) recursively do any replaces
 		toReplace = re.ReplaceAllLiteralString(toReplace, v)
+	}
+
+	retu
