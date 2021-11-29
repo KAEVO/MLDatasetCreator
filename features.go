@@ -71,4 +71,4 @@ func (f *Feature) resolveEndpoint(parentsValues map[string]string) (string, erro
 		toReplace = re.ReplaceAllLiteralString(toReplace, v)
 	}
 
-	retu
+	return toReplace, ni
