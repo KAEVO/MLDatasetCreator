@@ -4,4 +4,4 @@ import (
 	"fmt"
 )
 
-// BasicOAuthHeader spits out a basi
+// BasicOAuthHeader spits out a basic OAuth He
