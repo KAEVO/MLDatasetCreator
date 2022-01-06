@@ -6,4 +6,4 @@ import (
 
 // BasicOAuthHeader spits out a basic OAuth Header based on access token
 func BasicOAuthHeader(consumerKey, nonce, signature, signatureMethod,
-	timestamp, tok
+	timestamp, token string) st
