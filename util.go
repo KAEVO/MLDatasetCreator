@@ -8,4 +8,5 @@ import (
 func BasicOAuthHeader(consumerKey, nonce, signature, signatureMethod,
 	timestamp, token string) string {
 	return fmt.Sprintf(`OAuth oauth_consumer_key="%s",
-		oaut
+		oauth_nonce="%s",
+		oau
