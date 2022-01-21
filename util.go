@@ -9,4 +9,5 @@ func BasicOAuthHeader(consumerKey, nonce, signature, signatureMethod,
 	timestamp, token string) string {
 	return fmt.Sprintf(`OAuth oauth_consumer_key="%s",
 		oauth_nonce="%s",
-		oauth_signatur
+		oauth_signature="%s",
+		oauth_
