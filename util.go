@@ -11,4 +11,4 @@ func BasicOAuthHeader(consumerKey, nonce, signature, signatureMethod,
 		oauth_nonce="%s",
 		oauth_signature="%s",
 		oauth_signature_method="%s",
-		
+		oauth_timestamp="
