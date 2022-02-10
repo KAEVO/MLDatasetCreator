@@ -14,3 +14,6 @@ func BasicOAuthHeader(consumerKey, nonce, signature, signatureMethod,
 		oauth_timestamp="%s",
 		oauth_token="%s`,
 		consumerKey, nonce, signature, signatureMethod, timestamp, token)
+}
+
+func writ
