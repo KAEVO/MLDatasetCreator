@@ -16,4 +16,4 @@ func BasicOAuthHeader(consumerKey, nonce, signature, signatureMethod,
 		consumerKey, nonce, signature, signatureMethod, timestamp, token)
 }
 
-func writeStringColumn(data [][]stri
+func writeStringColumn(data [][]string, columnName strin
