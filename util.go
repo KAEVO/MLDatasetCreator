@@ -19,4 +19,4 @@ func BasicOAuthHeader(consumerKey, nonce, signature, signatureMethod,
 func writeStringColumn(data [][]string, columnName string, values []string) {
 	var colIndex int
 	for i := range data[0] {
-		// Find first empty co
+		// Find first empty column or colum
