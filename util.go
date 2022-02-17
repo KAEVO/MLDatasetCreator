@@ -18,4 +18,4 @@ func BasicOAuthHeader(consumerKey, nonce, signature, signatureMethod,
 
 func writeStringColumn(data [][]string, columnName string, values []string) {
 	var colIndex int
-	for
+	for i := range data[0] 
