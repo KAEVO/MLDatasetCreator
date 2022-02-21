@@ -20,4 +20,4 @@ func writeStringColumn(data [][]string, columnName string, values []string) {
 	var colIndex int
 	for i := range data[0] {
 		// Find first empty column or column with same header to overwrite
-		if da
+		if data[0][i] == "" 
