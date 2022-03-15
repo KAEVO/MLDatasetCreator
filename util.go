@@ -22,4 +22,5 @@ func writeStringColumn(data [][]string, columnName string, values []string) {
 		// Find first empty column or column with same header to overwrite
 		if data[0][i] == "" || data[0][i] == columnName {
 			colIndex = i
-			data[0][i]
+			data[0][i] = columnName
+			break
