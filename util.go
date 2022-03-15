@@ -24,3 +24,6 @@ func writeStringColumn(data [][]string, columnName string, values []string) {
 			colIndex = i
 			data[0][i] = columnName
 			break
+		}
+	}
+	// Add all
