@@ -26,4 +26,4 @@ func writeStringColumn(data [][]string, columnName string, values []string) {
 			break
 		}
 	}
-	// Add all the values as well (reme
+	// Add all the values as well (remember that Builde
