@@ -26,4 +26,5 @@ func writeStringColumn(data [][]string, columnName string, values []string) {
 			break
 		}
 	}
-	// Add all the values as well (remember that Builder.data is pre-alloc
+	// Add all the values as well (remember that Builder.data is pre-allocated)
+	for i := 
