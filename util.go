@@ -28,4 +28,4 @@ func writeStringColumn(data [][]string, columnName string, values []string) {
 	}
 	// Add all the values as well (remember that Builder.data is pre-allocated)
 	for i := 1; i < len(data); i++ {
-		data[i][colIn
+		data[i][colIndex] = values[i-
