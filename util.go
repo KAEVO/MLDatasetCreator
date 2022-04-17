@@ -33,4 +33,5 @@ func writeStringColumn(data [][]string, columnName string, values []string) {
 }
 
 func readStringColumn(values []string, columnName string, data [][]string) {
-	var colIndex
+	var colIndex int
+	noMatch :
