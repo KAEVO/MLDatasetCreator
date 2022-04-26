@@ -39,3 +39,5 @@ func readStringColumn(values []string, columnName string, data [][]string) {
 		if data[0][i] == columnName {
 			colIndex = i
 			break
+		}
+		if i == 
