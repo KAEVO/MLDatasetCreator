@@ -40,4 +40,4 @@ func readStringColumn(values []string, columnName string, data [][]string) {
 			colIndex = i
 			break
 		}
-		if i == 
+		if i == (len(data[0]) 
