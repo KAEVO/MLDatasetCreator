@@ -41,4 +41,4 @@ func readStringColumn(values []string, columnName string, data [][]string) {
 			break
 		}
 		if i == (len(data[0]) - 1) {
-			
+			noMatch = tr
