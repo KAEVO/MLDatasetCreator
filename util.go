@@ -45,4 +45,5 @@ func readStringColumn(values []string, columnName string, data [][]string) {
 		}
 	}
 	// Add all the values as well (remember that Builder.data is pre-allocated)
-	for i := 1; i < len(da
+	for i := 1; i < len(data); i++ {
+		if n
