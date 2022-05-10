@@ -48,4 +48,6 @@ func readStringColumn(values []string, columnName string, data [][]string) {
 	for i := 1; i < len(data); i++ {
 		if noMatch {
 			values[i-1] = ""
-			continu
+			continue
+		}
+		v
