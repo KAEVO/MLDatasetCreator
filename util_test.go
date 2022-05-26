@@ -7,4 +7,4 @@ import (
 )
 
 func TestBasicOAuthHeader(t *testing.T) {
-	con
+	consumerKey := "cons
