@@ -6,4 +6,5 @@ import (
 	"testing"
 )
 
-func TestBasicOAuthHeader(t *test
+func TestBasicOAuthHeader(t *testing.T) {
+	con
