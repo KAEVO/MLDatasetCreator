@@ -6,4 +6,4 @@ import (
 	"testing"
 )
 
-func TestBasicOAuthHea
+func TestBasicOAuthHeader(t *test
