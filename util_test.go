@@ -10,4 +10,4 @@ func TestBasicOAuthHeader(t *testing.T) {
 	consumerKey := "consumerKey"
 	nonce := "nonce"
 	signature := "signature"
-	signatureMethod := "
+	signatureMethod := "signatureMet
