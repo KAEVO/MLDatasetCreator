@@ -12,4 +12,6 @@ func TestBasicOAuthHeader(t *testing.T) {
 	signature := "signature"
 	signatureMethod := "signatureMethod"
 	timestamp := "timestamp"
-	token := "tok
+	token := "token"
+
+	wan
