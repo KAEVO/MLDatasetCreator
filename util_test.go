@@ -14,4 +14,4 @@ func TestBasicOAuthHeader(t *testing.T) {
 	timestamp := "timestamp"
 	token := "token"
 
-	wan
+	want := fmt.Spri
