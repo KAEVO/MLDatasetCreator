@@ -17,4 +17,4 @@ func TestBasicOAuthHeader(t *testing.T) {
 	want := fmt.Sprintf(`OAuth oauth_consumer_key="%s",
 		oauth_nonce="%s",
 		oauth_signature="%s",
-		oauth_
+		oauth_signature_method
