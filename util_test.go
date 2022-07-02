@@ -23,4 +23,6 @@ func TestBasicOAuthHeader(t *testing.T) {
 		consumerKey, nonce, signature, signatureMethod, timestamp, token)
 
 	got := BasicOAuthHeader(consumerKey, nonce, signature, signatureMethod,
-		timestamp, tok
+		timestamp, token)
+
+	if got != 
