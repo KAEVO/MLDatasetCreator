@@ -26,4 +26,4 @@ func TestBasicOAuthHeader(t *testing.T) {
 		timestamp, token)
 
 	if got != want {
-		t.Fatalf("
+		t.Fatalf("got: %v\n want: %
