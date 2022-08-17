@@ -31,4 +31,4 @@ func TestBasicOAuthHeader(t *testing.T) {
 }
 
 func TestWriteStringColumn(t *testing.T) {
-	data :
+	data := [][]string
