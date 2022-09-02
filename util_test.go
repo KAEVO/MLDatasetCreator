@@ -33,4 +33,5 @@ func TestBasicOAuthHeader(t *testing.T) {
 func TestWriteStringColumn(t *testing.T) {
 	data := [][]string{
 		[]string{"a", "b", ""},
-		[]string{"a", "b",
+		[]string{"a", "b", ""},
+		[]stri
