@@ -35,4 +35,6 @@ func TestWriteStringColumn(t *testing.T) {
 		[]string{"a", "b", ""},
 		[]string{"a", "b", ""},
 		[]string{"a", "b", ""},
-		[]string{"a
+		[]string{"a", "b", ""},
+	}
+	c
