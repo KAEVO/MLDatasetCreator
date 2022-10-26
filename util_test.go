@@ -40,4 +40,4 @@ func TestWriteStringColumn(t *testing.T) {
 	colName := "c"
 	values := []string{"c", "c", "c"}
 
-	writeStringColum
+	writeStringColumn(data, colName, va
