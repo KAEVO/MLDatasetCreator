@@ -44,4 +44,5 @@ func TestWriteStringColumn(t *testing.T) {
 	want := [][]string{
 		[]string{"a", "b", "c"},
 		[]string{"a", "b", "c"},
-		[]string{"a", "b", 
+		[]string{"a", "b", "c"},
+		[]st
