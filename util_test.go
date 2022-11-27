@@ -42,4 +42,4 @@ func TestWriteStringColumn(t *testing.T) {
 
 	writeStringColumn(data, colName, values)
 	want := [][]string{
-		[]st
+		[]string{"a", "b", "c"
