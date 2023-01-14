@@ -48,4 +48,4 @@ func TestWriteStringColumn(t *testing.T) {
 		[]string{"a", "b", "c"},
 	}
 
-	if got := data; !reflect.De
+	if got := data; !reflect.DeepEqual(got, w
