@@ -49,4 +49,4 @@ func TestWriteStringColumn(t *testing.T) {
 	}
 
 	if got := data; !reflect.DeepEqual(got, want) {
-		t.Fatalf("got: %v
+		t.Fatalf("got: %v\n want: 
