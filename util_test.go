@@ -49,4 +49,8 @@ func TestWriteStringColumn(t *testing.T) {
 	}
 
 	if got := data; !reflect.DeepEqual(got, want) {
-		t.Fatalf("got: %v\n want: %v\n ", got, wan
+		t.Fatalf("got: %v\n want: %v\n ", got, want)
+	}
+}
+
+fu
