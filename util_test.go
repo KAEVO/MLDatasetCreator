@@ -53,4 +53,4 @@ func TestWriteStringColumn(t *testing.T) {
 	}
 }
 
-func TestWriteStringColumnOv
+func TestWriteStringColumnOverwrite(t *testing.
