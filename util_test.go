@@ -53,4 +53,4 @@ func TestWriteStringColumn(t *testing.T) {
 	}
 }
 
-fu
+func TestWriteStringColumnOv
