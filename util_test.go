@@ -53,4 +53,5 @@ func TestWriteStringColumn(t *testing.T) {
 	}
 }
 
-func TestWriteStringColumnOverwrite(t *testing.
+func TestWriteStringColumnOverwrite(t *testing.T) {
+	data := []
