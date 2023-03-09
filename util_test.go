@@ -58,4 +58,4 @@ func TestWriteStringColumnOverwrite(t *testing.T) {
 		[]string{"a", "b", "c"},
 		[]string{"a", "b", "0"},
 		[]string{"a", "b", "0"},
-		[
+		[]string{"a", "b", "0"
