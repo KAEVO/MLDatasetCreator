@@ -64,4 +64,5 @@ func TestWriteStringColumnOverwrite(t *testing.T) {
 	values := []string{"c", "c", "c"}
 
 	writeStringColumn(data, colName, values)
-	wa
+	want := [][]string{
+		[
