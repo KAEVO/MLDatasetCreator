@@ -71,4 +71,4 @@ func TestWriteStringColumnOverwrite(t *testing.T) {
 		[]string{"a", "b", "c"},
 	}
 
-	if got := data; !reflec
+	if got := data; !reflect.DeepEqual(got,
