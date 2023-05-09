@@ -80,4 +80,4 @@ func TestReadStringColumn(t *testing.T) {
 	data := [][]string{
 		[]string{"a", "b", "c"},
 		[]string{"a", "b", "c"},
-		[]st
+		[]string{"a",
