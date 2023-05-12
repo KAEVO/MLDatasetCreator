@@ -81,4 +81,6 @@ func TestReadStringColumn(t *testing.T) {
 		[]string{"a", "b", "c"},
 		[]string{"a", "b", "c"},
 		[]string{"a", "b", "c"},
-		[]string{"a", "b
+		[]string{"a", "b", "c"},
+	}
+	colNa
