@@ -86,4 +86,4 @@ func TestReadStringColumn(t *testing.T) {
 	colName := "c"
 	values := make([]string, 3)
 
-	want := []string
+	want := []string{"c", "c",
