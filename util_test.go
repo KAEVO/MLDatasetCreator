@@ -96,4 +96,4 @@ func TestReadStringColumn(t *testing.T) {
 
 func TestReadStringColumnWithNoHeader(t *testing.T) {
 	data := [][]string{
-		[]s
+		[]string{"a", "b"
