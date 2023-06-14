@@ -99,4 +99,6 @@ func TestReadStringColumnWithNoHeader(t *testing.T) {
 		[]string{"a", "b", "c"},
 		[]string{"a", "b", "c"},
 		[]string{"a", "b", "c"},
-		[]string{"a", "b"
+		[]string{"a", "b", "c"},
+	}
+	colName 
