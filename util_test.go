@@ -104,4 +104,5 @@ func TestReadStringColumnWithNoHeader(t *testing.T) {
 	colName := "d"
 	values := make([]string, 3)
 
-	want := []string{"", "", "
+	want := []string{"", "", ""}
+	readString
