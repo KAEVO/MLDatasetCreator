@@ -107,4 +107,4 @@ func TestReadStringColumnWithNoHeader(t *testing.T) {
 	want := []string{"", "", ""}
 	readStringColumn(values, colName, data)
 
-	if
+	if got := values
