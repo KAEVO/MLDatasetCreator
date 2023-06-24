@@ -108,3 +108,4 @@ func TestReadStringColumnWithNoHeader(t *testing.T) {
 	readStringColumn(values, colName, data)
 
 	if got := values; !reflect.DeepEqual(got, want) {
+		t.Fatalf("
