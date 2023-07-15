@@ -1,1 +1,1 @@
-# MLDatasetCreator\nA Golang tool that provides efficient creation of Machine Learning Datasets from public Social Network APIs. Its main function is to manage concurrent operation
+# MLDatasetCreator\nA Golang tool that provides efficient creation of Machine Learning Datasets from public Social Network APIs. Its main function is to manage concurrent operations and save data, o
